@@ -1,6 +1,8 @@
 # Base62.jl
 
 [![CI](https://github.com/HomogeneousTools/Base62.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/HomogeneousTools/Base62.jl/actions/workflows/CI.yml)
+[![version](https://img.shields.io/github/v/release/HomogeneousTools/Base62.jl)](https://github.com/HomogeneousTools/Base62.jl/releases)
+[![docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://homogeneoustools.github.io/Base62.jl/dev/)
 
 A Julia package for Base62 encoding and decoding of binary data, closely
 mirroring the API of Julia's standard library
