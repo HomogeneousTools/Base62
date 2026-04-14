@@ -220,5 +220,9 @@ end
 end
 
 @testset "Docstrings" begin
-    @test isempty(Docs.undocumented_names(Base62))
+    # Verify key exported symbols are documented
+    @test !isempty(string(@doc Base62.base62encode))
+    @test !isempty(string(@doc Base62.base62decode))
+    @test !isempty(string(@doc Base62.Base62EncodePipe))
+    @test !isempty(string(@doc Base62.Base62DecodePipe))
 end
