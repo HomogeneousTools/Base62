@@ -96,7 +96,7 @@ end
     Base62EncodePipe(ostream)
 
 Return a new write-only I/O stream, which converts any bytes written to it into
-base62-encoded ASCII bytes written to `ostream`. Calling [`close`](@ref) on the
+base62-encoded ASCII bytes written to `ostream`. Calling `close` on the
 `Base62EncodePipe` stream is necessary to complete the encoding (but does not
 close `ostream`).
 
@@ -155,15 +155,15 @@ end
     base62encode(writefunc, args...; context=nothing)
     base62encode(args...; context=nothing)
 
-Given a [`write`](@ref)-like function `writefunc`, which takes an I/O stream as
+Given a `write`-like function `writefunc`, which takes an I/O stream as
 its first argument, `base62encode(writefunc, args...)` calls `writefunc` to
 write `args...` to a base62-encoded string, and returns the string.
 `base62encode(args...)` is equivalent to `base62encode(write, args...)`: it
-converts its arguments into bytes using the standard [`write`](@ref) functions
+converts its arguments into bytes using the standard `write` functions
 and returns the base62-encoded string.
 
 The optional keyword argument `context` can be set to a `:key=>value` pair
-or an `IO` or [`IOContext`](@ref) object whose attributes are used for the I/O
+or an `IO` or `IOContext` object whose attributes are used for the I/O
 stream passed to `writefunc` or `write`.
 
 Base62 uses the lexicographic alphabet `0-9A-Za-z` (62 alphanumeric characters).
